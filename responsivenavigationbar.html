@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .header{
+        width: 100%;
+        height: 70px;
+        background-color: #333;
+        padding: 0 15px;
+    }
+    .header h1{
+        float: left;
+        color: white;
+        line-height: 70px;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .header .menu{
+        list-style: none;
+        float: right;
+        /* text-decoration: none;  */
+    } 
+    .menu li{
+        display: inline-block;
+        line-height: 70px;
+        position: relative;
+    }
+    .menu li a{
+        color: white;
+        text-decoration: none;
+        /* font-size: 10px; */
+        text-transform: uppercase; 
+        padding: 0 20px; 
+    }  
+    .menu li a:hover, .show-btn, .close-btn{
+        color: orange;
+        transition: .4s;
+    }
+    .show-btn, .close-btn{
+        font: 25px;
+        color: white;
+        line-height: 70px;
+        display: none; 
+    }
+    .show-btn{
+        float: right;
+    }
+    #chk{
+        position: absolute;
+        z-index: -4;
+        visibility: hidden;
+    }
+    @media( max-width: 871px){
+        .show-btn, .close-btn{
+            display: block;
+        }
+        .menu{
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding: 80px 0;
+            transition: .7s;
+            line-height: normal;
+        }
+        #chk:checked ~ .menu{
+            right: 0;
+        }
+        .menu li{
+            display: block;
+        }
+        .menu li a{
+            display: block;
+        }
+        .close-btn{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+    }
+    .image{
+        padding: 20px;
+    }
+    .image img{
+        width: 100%;
+        max-width: 700px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .image p{
+        text-align: justify;
+    }
+    .submenu{
+        position: absolute;
+        left: 0; 
+        background-color: #333;
+        width: 150px;
+        display: none;
+    }
+    .submenu1{
+        position: absolute;
+        background-color: #333;
+        width: 150px;
+        left: 100%;
+        top: 0;
+        display: none;
+        padding: 0 ; 
+    }
+    .submenu2{
+        position: absolute;
+        background-color: #333;
+        width: 150px;
+        left: 100%;
+        top: 0;
+        display: none;
+    }
+    .menu li:hover .submenu{
+        display: block;
+    }  
+    .submenu li:hover .submenu1{
+        display: block;
+    }
+    .submenu li:hover .submenu2{
+        display: block;
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>Website Logo</h1>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+                <a href="#">Gallery View</a>
+            <ul class="submenu">
+                <li><a href="#">Front End</a>
+                <ul class="submenu1">
+                     <li> <a href="#">HTML</a></li>
+                     <li> <a href="#">CSS</a></li>
+                     <li> <a href="#">Bootsrtap</a></li>
+                </ul></li>
+                <li><a href="#">back End</a>
+                    <ul class="submenu2">
+                        <li><a href="#">NodeJs</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Ruby</a></li>
+                        <li><a href="#">Java</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </li >
+            <li><a href="#">Contact Us</a></li>
+            <label for="chk" class="close-btn">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="image">
+        <img src="../router image.PNG" alt="ndsjui">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus animi corrupti necessitatibus minima fuga dolor aut, perspiciatis amet rem iusto quaerat! Nam nostrum praesentium distinctio magnam qui et, commodi quas, dolores deleniti ad porro debitis vel fugit, delectus doloribus non laboriosam consequatur placeat deserunt eligendi quasi illum fuga. At quidem deserunt tempora, tempore quo eaque iusto consequatur vero vel sed eveniet fuga laboriosam maxime perferendis ipsa officia dolorum porro. Porro non ipsam nostrum accusantium ipsum repellat rerum! Qui, fugit sint laboriosam dolor eius itaque corrupti doloremque aperiam architecto autem illo? Dolorem dolores voluptatem quo vel vitae cupiditate atque temporibus voluptate minus ducimus ad laborum nesciunt incidunt dolore sint nostrum iusto, quibusdam accusamus dolor laudantium praesentium modi. Nisi recusandae eligendi blanditiis fuga distinctio totam suscipit harum, reprehenderit sint pariatur error sunt, vel, alias similique. Cumque aliquid maxime quas tenetur iste ab voluptate, quaerat doloremque? Vero expedita omnis eos, iure similique incidunt rem ipsum quae quam? Nesciunt repellendus odio, voluptas alias quidem dolorem sit itaque voluptatem suscipit nisi officia voluptatibus et labore odit recusandae, eum ab, est neque tenetur. Illo quasi harum delectus, odio nihil natus sit accusantium, dicta nemo, quia amet consequuntur incidunt! Atque voluptatibus nostrum doloremque mollitia similique, natus nobis. Necessitatibus culpa optio inventore blanditiis ab mollitia voluptatem, consectetur voluptates. Numquam id, culpa reprehenderit non possimus praesentium alias atque voluptates! Debitis a dolor ratione ullam voluptatibus officia hic porro nihil earum odit ex, dolores dicta autem soluta veniam ab vel suscipit. Laudantium, harum nostrum magni amet hic debitis ipsa eaque alias perferendis maiores dolore incidunt aliquid deleniti earum ducimus sunt? Necessitatibus accusantium fugit tempore, temporibus iure quibusdam officia nobis recusandae provident voluptates delectus natus magnam laboriosam cupiditate aspernatur obcaecati doloremque placeat aperiam voluptate ad. Iste nam sit vero sint, quidem saepe hic vel porro itaque quisquam tempora molestiae nobis adipisci ad. A facere velit atque incidunt, quaerat, aut nam at reprehenderit magnam voluptate quod, ipsam quibusdam eius numquam animi quae maiores molestiae accusantium id. Ipsum esse suscipit aliquid provident amet unde hic minima, voluptatem dicta dolor, natus expedita ut atque voluptates doloremque. Sapiente tenetur, magnam sunt asperiores, modi, labore ullam veritatis vel hic saepe ab assumenda possimus nam corrupti quas minus tempore ratione quis. Veniam doloribus ipsa nostrum. Voluptatibus facilis ut, dolorem, nihil, voluptatum illum architecto error quibusdam blanditiis eligendi sed. Cum, amet porro tenetur mollitia sunt corporis doloremque molestias eaque sequi expedita possimus, quos aperiam dolore maiores excepturi quibusdam repellendus, doloribus fuga sit veniam minus? Nisi deleniti quam, dolor sit temporibus quisquam autem. Commodi ex accusantium veritatis? Dolorum veniam quis necessitatibus laudantium distinctio doloremque nulla sequi? Mollitia voluptatum alias expedita. Commodi, sit? Atque eaque maxime corrupti ipsum totam qui dicta, officia harum placeat deserunt fuga incidunt provident modi in quia nisi cum minus perferendis aspernatur, vel quibusdam at beatae. Sed esse ut aperiam blanditiis voluptatum voluptatibus nesciunt, autem animi consequuntur iure doloribus assumenda repellat tempore. Eaque inventore quam laboriosam, enim, maiores reprehenderit beatae esse quas praesentium corporis ad voluptate earum consequatur sint repellat. Earum repellat repellendus alias voluptates optio?</p>
+    </div>
+</body>
+</html>
