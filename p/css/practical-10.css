@@ -141,4 +141,14 @@ a i{
     .leftsidebar{
         width: 100%;
     }
+    .header h1{
+        opacity: 0;
+    }
+    .header img{
+        /* display: flex;
+        justify-items: center;
+        align-content: center; */
+        position: absolute;
+        right: 40%;
+    }
 }
