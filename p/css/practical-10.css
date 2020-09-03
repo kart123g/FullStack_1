@@ -79,8 +79,8 @@
     color: white;
     font: 40px;
 }
-a i{
-    margin-left: 35px;  
+.leftsidebar ul li a i{
+    margin-right: 15px;  
     /* margin-right: 35px; */
 }
 

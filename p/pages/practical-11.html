@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-11</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table 
+        ,tr
+        ,td
+        ,th {
+            border-collapse: collapse;
+            margin: 30px auto;
+            border-bottom: 1px solid #ddd;
+        }
+        table{
+            border: 2px solid #34495e;
+            border-radius: 40px;
+        }
+        tr .head1{
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border: 2px solid #34495e;
+        }
+        .head2{
+            border-bottom: 4px solid #ddd;
+            text-align: left;
+        }
+        .head2 .prac{
+            padding: 10px;
+            text-align: left;
+            width: 500px;
+        }
+        .head2 .sn{
+            text-align: center;
+            width: 50px;
+        }
+        .head2 .link{
+            width: 150px;
+        }
+        .head2 .status{
+            width: 150px;
+        }
+        .head2 .tools{
+            width: 100px;
+        }
+        .material-icons{
+            color: grey;
+        }
+        .material-icons:hover{
+            color: red;
+        }
+        #create:hover{
+            color: blue;
+        }
+        td:nth-child(1){
+            text-align: center;
+        }
+        tbody tr a{
+            text-decoration: none;
+            color: grey;
+        }
+        td:nth-child(3){
+            /* text-align: center; */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: grey;
+        }
+        td:nth-child(5){
+            text-align: center;
+        }
+        td:nth-child(2){
+            padding: 10px;
+        }
+        tbody td{
+            border-bottom: 1px solid #ddd;
+            height: 50px;
+        }
+        tr:hover{
+            background-color: #ddd;
+            cursor: default;
+        }
+        td:nth-child(4){
+            color: green;
+        }
+        #check{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="5" class="head1">FullStack Live Practical Book</th>
+        </tr>
+        <tr class="head2">
+            <th class="sn">#</th>
+            <th class="prac">Practical Name</th>
+            <th class="link">Link</th>
+            <th class="status">Status</th>
+            <th class="tools">Tools</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Create web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.</td>
+            <td><a href="./practical-4-B.html">Practical-1</a></td>
+            <td>Checked</td>
+            <td><span class="material-icons" id="create" title="Edit">
+                create
+                </span>
+                <span class="material-icons" title="Delete">
+                    delete
+                    </span>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Live your First Web-Page on Git-Hub.</td>
+            <td><a href="./practical-4-C.html">Practical-2</a></td>
+            <td>Checked</td>
+            <td>
+                <span class="material-icons" id="create" title="Edit">
+                    create
+                    </span>
+                    <span class="material-icons" title="Delete">
+                        delete
+                        </span>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Create a web page showing a basic html structure using character Entities and span Tag.</td>
+            <td><a href="./practical-4-D.html">Practical-3</a></td>
+            <td>Checked</td>
+            <td>
+                <span class="material-icons" id="create" title="Edit">
+                    create
+                    </span>
+                    <span class="material-icons" title="Delete">
+                        delete
+                        </span>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Create a website having list of all practical and their individual practical Page links.</td>
+            <td><a href="./practical-4-E.html">Practical-4</a></td>
+            <td id="check">Un-Checked</td>
+            <td>
+                <span class="material-icons" id="create" title="Edit"> 
+                    create
+                    </span>
+                    <span class="material-icons" title="Delete">
+                        delete
+                        </span>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
