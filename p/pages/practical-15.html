@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical - 15</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+</head>
+<style>
+    *{
+        background-color: grey;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .counter{
+        margin-top: 50px;
+        margin-left: 80vh;
+    }
+    button{
+        font-size: 40px;
+        outline: none;
+        background-color: yellow;
+        padding: 6px 20px;
+    }
+    button p{
+        color: black;
+        text-align: center;
+        display: inline;
+        background-color: yellow;
+    }
+    .counter-minus{
+        margin-left: 75vh;
+    }
+    .counter-display{
+        display: inline;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .counter-minus{
+        margin-top: 10px;
+    }
+    h1{
+        font-weight: bold;
+        color: white;
+    }
+</style>
+<body>
+    <h1 class="counter">COUNTER</h1>
+    <button class="counter-minus" ><p>-</p></button>
+    <h1 class="counter-display" ></h1>
+    <button class="counter-plus" ><p>+ </p></button>
+
+    <script>
+       let counterDisplayElem = document.querySelector('.counter-display');
+        let counterMinusElem = document.querySelector('.counter-minus');
+        let counterPlusElem = document.querySelector('.counter-plus');
+
+    let count = 0;
+
+    updateDisplay();
+
+    counterPlusElem.addEventListener("click",()=>{
+    count++;
+    updateDisplay();
+    }) ;
+
+    counterMinusElem.addEventListener("click",()=>{
+    count--;
+    if(count < 0){
+        count = 0;
+    }
+    updateDisplay();
+    });
+
+function updateDisplay(){
+    counterDisplayElem.innerHTML = count;
+};
+
+    </script>
+</body>
+</html>
