@@ -33,6 +33,7 @@ function createDiv(k){
     newDiv.appendChild(trashBtn);
 
     toList.appendChild(newDiv);
+    toInput.value = " ";
 
 }
 function checkdel(k){
