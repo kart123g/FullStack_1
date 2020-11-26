@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: darkslateblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    /* position: absolute; */
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header{
+    background-color: #f7f7f7;
+}
+.header h2{
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+.form{
+    padding: 20px 30px;
+}
+.form-cont{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-cont label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-cont input{
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+}
+.form-cont i{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    visibility: hidden;
+}
+.form-cont small{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+.form button{
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.form-cont.success input{
+    border-color: green;
+}
+
+.form-cont.error input{
+    border-color: red;
+}
+.form-cont.success .fa-check-circle{
+    visibility: visible;
+    color: green;
+}
+.form-cont.error .fa-exclamation-circle{
+    visibility: visible;
+    color: red;
+}
+.form-cont.error small{
+    visibility: visible;
+    color: red;
+}
+.form-cont.msg small{
+    visibility: visible;
+    color: red;
+    margin-top: 10px;
+}
+.form-cont.msg .fa-exclamation-circle{
+    visibility: visible;
+    color: red;
+}
+.form-cont.msg input{
+    border-color: red;
+}
+.form-cont.msg small{
+    font-size: 13px;
+}
+.form-cont.msgu small{
+    visibility: visible;
+    color: red;
+    margin-top: 10px;
+}
+.form-cont.msgu small{
+    font-size: 13px;
+    bottom: -13px;
+}
+.form-cont.msgu .fa-exclamation-circle{
+    visibility: visible;
+    color: red;
+}
+.form-cont.msgu input{
+    border-color: red;
+}
